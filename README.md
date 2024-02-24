@@ -69,6 +69,7 @@ We trained the polynomial regression model using the preprocessed dataset, inclu
 The performance metrics of the model are as follows:
 - Mean squared error testing (MSE): about 5.13
 - Mean Squared Error Training (MSE): about 5.28
+
 These results show that the model performs consistently on the training and test sets, indicating it is not overfitting. However, there is room for improvement in further reducing the MSE to improve the prediction accuracy.
 
 ### Conclusion
