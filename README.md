@@ -1,6 +1,6 @@
 # CSE151A
 ## Overview
-This is a project for CSE151A at UCSD.
+This is a project for CSE151A at UCSD. (The link to our jupyter notebook: https://github.com/xgui17/CSE151A/blob/main/Group%20Project%20Milestone%20%233.ipynb)
 
 This repository contains the analysis of crop yield data for India. The datasets used in the analysis include information on various crops grown in different states and districts of India and the corresponding yields of these crops in different years.
 
@@ -73,7 +73,7 @@ The performance metrics of the model are as follows:
 These results show that the model performs consistently on the training and test sets, indicating it is not overfitting. However, there is room for improvement in further reducing the MSE to improve the prediction accuracy.
 
 ### Conclusion
-The polynomial regression model is the first step in our analysis, allowing us to capture nonlinear relationships and gain insight into the factors that affect crop yield. We will further refine and improve the model, such as feature selection, regularization, and exploring other regression models to improve prediction accuracy and deepen our understanding of crop yield dynamics.
+The polynomial regression model is the first step in our analysis, allowing us to capture nonlinear relationships and gain insight into the factors that affect crop production. We will further refine and improve the model, such as feature selection, regularization, and exploring other regression models to improve prediction accuracy and deepen our understanding of crop production dynamics.
 
 ## Future models
 
