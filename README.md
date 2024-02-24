@@ -12,7 +12,7 @@ The dataset consists of the following columns:
   1. State: Indicates the State of India in which the crop yield is measured.
   2. District: Indicate the district of the State in which the crop is grown.
   3. Crop: Indicates the specific crop grown in the field. 
-  4. Crop_Year: The year in which the crop was harvested or produced. 
+  4. Crop_Year: The year the crop was harvested or produced. 
   5. Season: Divides the cropping period of the crop into different seasons. 
   6. Area: Measurement of the area of a crop field. 
   7. Production: Indicates the total production of a crop field in a given season. 
@@ -75,3 +75,12 @@ These results show that the model performs consistently on the training and test
 ### Conclusion
 The polynomial regression model is the first step in our analysis, allowing us to capture nonlinear relationships and gain insight into the factors that affect crop yield. We will further refine and improve the model, such as feature selection, regularization, and exploring other regression models to improve prediction accuracy and deepen our understanding of crop yield dynamics.
 
+## Future models
+
+In addition to the polynomial regression model discussed earlier, we are considering exploring two other models: dense layer neural networks and random forests.
+
+### Neural networks with dense layers
+Neural networks are powerful models that capture the complexity of nonlinear relationships in data. By using dense layers, neural networks can automatically learn the interactions between features, thus reducing the need for manual feature engineering. This makes them ideal for datasets like ours, where traditional linear models or simple polynomials may not adequately capture underlying patterns. Neural network modeling is flexible and has the potential to improve prediction accuracy.
+
+### Random Forests
+Random Forest is another model we plan to explore further. It is known for its robustness to overfitting and its ability to handle complex interactions between features. Random forests are particularly suitable for datasets with mixed feature types, as they can efficiently handle numeric and categorical variables. In addition, Random Forest can handle high dimensionality due to the single coding of categorical variables, which makes it an ideal candidate model for our dataset.
