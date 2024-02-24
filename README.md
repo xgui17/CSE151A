@@ -57,7 +57,7 @@ The dataset exhibits variations in crop yield across different states, districts
 ## Model 1: Polynomial Regression
 
 ### Introduction
-This section presents an analytical approach to predicting crop yields using polynomial regression. Polynomial regression allows us to capture the nonlinear relationship between the independent and target variables, providing a more flexible modeling approach than simple linear regression.
+This section presents an analytical approach to predicting crop productions using polynomial regression. Polynomial regression allows us to capture the nonlinear relationship between the independent and target variables, providing a more flexible modeling approach than simple linear regression.
 
 ### Polynomial Features
 To capture the nonlinear relationships in the dataset, we introduce polynomial features. These features consist of a polynomial combination of the original features. We can better approximate the underlying data distribution by including a certain degree of polynomial features.
