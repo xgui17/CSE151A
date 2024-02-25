@@ -1,6 +1,6 @@
 # CSE151A
 ## Overview
-This is a project for CSE151A at UCSD. (The link to our jupyter notebook: https://github.com/xgui17/CSE151A/blob/main/Group%20Project%20Milestone%20%233.ipynb)
+This is a project for CSE151A at UCSD. (The link to our <a href="https://github.com/xgui17/CSE151A/blob/main/Group%20Project%20Milestone%20%233.ipynb">jupyter notebook</a>)
 
 This repository contains the analysis of crop yield data for India. The datasets used in the analysis include information on various crops grown in different states and districts of India and the corresponding yields of these crops in different years.
 
@@ -67,10 +67,10 @@ We trained the polynomial regression model using the preprocessed dataset, inclu
 
 ### Results
 The performance metrics of the model are as follows:
-- Mean squared error testing (MSE): about 5.13
-- Mean Squared Error Training (MSE): about 5.28
+- Mean squared error testing (MSE): about 0.3872
+- Mean Squared Error Training (MSE): about 0.3852
 
-These results show that the model performs consistently on the training and test sets, indicating it is not overfitting. However, there is room for improvement in further reducing the MSE to improve the prediction accuracy.
+These results show that the model performs consistently on the training and test sets, indicating it is not overfitting. More details can be seen in the <a href="https://github.com/xgui17/CSE151A/blob/main/Group%20Project%20Milestone%20%233.ipynb">jupyter notebook</a>.
 
 ### Conclusion
 The polynomial regression model is the first step in our analysis, allowing us to capture nonlinear relationships and gain insight into the factors that affect crop production. We will further refine and improve the model, such as feature selection, regularization, and exploring other regression models to improve prediction accuracy and deepen our understanding of crop production dynamics.
