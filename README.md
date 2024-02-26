@@ -69,7 +69,10 @@ The performance metrics of the model are as follows:
 These results show that the model performs consistently on the training and test sets, indicating it is not overfitting. More details can be seen in the <a href="https://github.com/xgui17/CSE151A/blob/main/Group%20Project%20Milestone%20%233.ipynb">jupyter notebook</a>.
 
 The alignment of our model's predictions with the actual `Production` values.
-<!-- ![alt text]() -->
+![Actual vs. Predicted Production](https://github.com/xgui17/CSE151A/blob/main/model1_actual_vs_pred.png)
+
+The fitting graph. Our model of interest with 2 interaction terms has improved performance compared with models with less interaction terms.
+![Model Fitting Graph](https://github.com/xgui17/CSE151A/blob/main/model1_fitting_graph.png)
 
 ### Conclusion
 The polynomial regression model is the first step in our analysis, allowing us to capture nonlinear relationships and gain insight into the factors that affect crop production. We will further refine and improve the model, such as feature selection, regularization, and exploring other regression models to improve prediction accuracy and deepen our understanding of crop production dynamics.
