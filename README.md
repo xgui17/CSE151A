@@ -151,7 +151,14 @@ In this section, we employ a neural network with dense layers to predict crop pr
 The model training involved preparing the dataset, defining the architecture with dense layers, and selecting activation functions and optimizers. The use of Keras Tuner facilitated the fine-tuning of hyperparameters. We employed techniques like k-fold cross-validation to ensure that the model's performance was robust across different subsets of data.
 
 ### Results
-The trained neural network, optimized through random search and early stopping, demonstrated a high level of accuracy. The hyperparameter tuning concluded with an optimal set of parameters, including a learning rate of 0.001, 32 nodes per layer, ReLU activation function, and the Adam optimizer, which helped in achieving low mean squared errors (MSE) on both training and testing sets.
+The trained neural network, optimized through random search and early stopping, demonstrated a high level of accuracy. The hyperparameter tuning concluded with an optimal set of parameters, including:
+- Learning rate: 0.001
+- Number of nodes per layer: 32
+- Activation Function: ReLU activation function
+- Optimizer: Adam optimizer
+And we got the result:
+- Mean squared error Testing (MSE): about 0.202
+- Mean Squared Error Training (MSE): about 0.193
 
 <p align="center">
   <img src="assets/model3_fitting_graph.png" width="50%" height="50%">
