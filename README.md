@@ -141,3 +141,27 @@ To further enhance the random forest regression model, we can explore the dimens
 
 ### Next Model Plan
 We plan to use Neural Networks as our next model. Neural networks are good at modeling complex, non-linear relationships between features, which might not be effectively captured by polynomial regression or even random forests, as used in our first two models. Production can be influenced by intricate interactions between various factors, such as area, season, and so on. A neural network's ability to capture these non-linearities could lead to better predictive performance. Additionally, after one-hot encoding of categorical variables, our datasets become high-dimensional. Neural networks are adept at handling high-dimensional data and automatically learning feature representations that are most relevant for prediction, potentially leading to more accurate predictions.
+
+## Model 3: Neural Net
+
+### Introduction
+In this section, we employ a neural network with dense layers to predict crop production. By analyzing patterns in crop data, we aim to develop a model that can forecast production with high accuracy. Initial models were simplistic, setting the stage for more advanced neural networks and hyperparameter tuning to refine predictions.
+
+### Model Training and Evaluation
+The model training involved preparing the dataset, defining the architecture with dense layers, and selecting activation functions and optimizers. The use of Keras Tuner facilitated the fine-tuning of hyperparameters. We employed techniques like k-fold cross-validation to ensure that the model's performance was robust across different subsets of data.
+
+### Results
+The trained neural network, optimized through random search and early stopping, demonstrated a high level of accuracy. The hyperparameter tuning concluded with an optimal set of parameters, including a learning rate of 0.001, 32 nodes per layer, ReLU activation function, and the Adam optimizer, which helped in achieving low mean squared errors (MSE) on both training and testing sets.
+
+<p align="center">
+  <img src="assets/model3_fitting_graph.png" width="50%" height="50%">
+</p>
+
+<p align="center" style="font-size:85%">
+  Figure 4: the fitting graph of Model 3. The performance of our model has improved as number of epochs increases.
+</p>
+
+### Conclusion
+The model significantly improved the predictive accuracy for crop production compared to initial versions. The success of the model was further confirmed through k-fold cross-validation, ensuring consistent performance across various data segments and bolstering confidence in the model's generalizability. This suggests not only a high level of accuracy but also an ability to adapt to new, unseen data, thereby avoiding common issues such as overfitting and underfitting. 
+
+Future improvements for enhancing model performance include data augmentation, advanced feature engineering, and exploring ensemble methods or more sophisticated neural network architectures. Additionally, integrating external datasets could further improve predictions, making the model an even more powerful tool for agricultural planning and forecasting. These steps will aim to solidify the model's applicability in real-world scenarios, ensuring it can serve as a reliable decision-support tool in agricultural production systems.
