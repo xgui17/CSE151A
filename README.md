@@ -150,7 +150,12 @@ In this section, we employ a neural network with dense layers to predict crop pr
 ### Model Training and Evaluation
 The model training involved preparing the dataset, defining the architecture with dense layers, and selecting activation functions and optimizers. The use of Keras Tuner facilitated the fine-tuning of hyperparameters. We employed techniques like k-fold cross-validation to ensure that the model's performance was robust across different subsets of data.
 
-### Results
+### Baseline Neural Network
+We established a baseline performance for our dataset using a simple neural network model, with parameters selected randomly. This baseline model is a starting point for comparison with future, more sophisticated models. The model, structured in a sequential format, comprises three dense layers each featuring 16 neurons utilizing sigmoid activation, and a final output layer tailored for regression. It was compiled with the SGD optimizer, set at a learning rate of 0.1, and trained over 10 epochs with a batch size of 10, aiming to minimize the mean squared error (MSE) loss.
+
+The training process concluded with the baseline model achieving a training MSE of 0.30139625 and a testing MSE of 0.31464802. The close proximity of training and testing errors suggests a well-generalizing model from the outset, underscoring the potential of neural networks in our dataset's context.
+
+### Hyperparameter Tuner Results
 The trained neural network, optimized through random search and early stopping, demonstrated a high level of accuracy. The hyperparameter tuning concluded with an optimal set of parameters, including:
 - Learning rate: 0.001
 - Number of nodes per layer: 32
