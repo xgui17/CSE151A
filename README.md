@@ -156,6 +156,7 @@ The trained neural network, optimized through random search and early stopping, 
 - Number of nodes per layer: 32
 - Activation Function: ReLU activation function
 - Optimizer: Adam optimizer
+
 And we got the result:
 - Mean squared error Testing (MSE): about 0.202
 - Mean Squared Error Training (MSE): about 0.193
