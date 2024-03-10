@@ -98,6 +98,9 @@ Neural networks are powerful models that capture the complexity of nonlinear rel
 ### Random Forests
 Random Forest is another model we plan to explore further. It is known for its robustness to overfitting and its ability to handle complex interactions between features. Random forests are particularly suitable for datasets with mixed feature types, as they can efficiently handle numeric and categorical variables. In addition, Random Forest can handle high dimensionality due to the single coding of categorical variables, which makes it an ideal candidate model for our dataset.
 
+### Evaluation of Data, Labels, and Loss Function
+
+The similarity in performance metrics suggests that the data and labels were sufficiently represented by the training and test datasets. The consistent performance also implies that the data was properly cleaned and preprocessed, including the effective use of one-hot encoding for categorical variables, ensuring that no significant bias or noise was introduced. The choice of Mean Squared Error (MSE) as the loss function appears to have been appropriate for this regression task, as evidenced by the model's ability to generalize well from the training data to unseen data.
 
 ## Model 2: Random Forest Regression
 
@@ -134,4 +137,7 @@ The random forest regression model initially exhibited a degree of overfitting, 
 
 The random forest regression model showed better performance after hyperparameter tuning than the polynomial regression model. Despite encountering runtime issues due to the model's computational complexity, we optimized the model's performance through effective hyperparameter tuning techniques.
 
-To further enhance the random forest regression model, we can explore the dimensionality reduction technique and try to use the ensemble approach to improve the prediction accuracy while solving the runtime limitation problem. In conclusion, the random forest regression model shows better predicting in crop yields. 
+To further enhance the random forest regression model, we can explore the dimensionality reduction technique and try to use the ensemble approach to improve the prediction accuracy while solving the runtime limitation problem. In conclusion, the random forest regression model shows better prediction of crop yields. 
+
+### Next Model Plan
+We plan to use Neural Networks as our next model. Neural networks are good at modeling complex, non-linear relationships between features, which might not be effectively captured by polynomial regression or even random forests, as used in our first two models. Production can be influenced by intricate interactions between various factors, such as area, season, and so on. A neural network's ability to capture these non-linearities could lead to better predictive performance. Additionally, after one-hot encoding of categorical variables, our datasets become high-dimensional. Neural networks are adept at handling high-dimensional data and automatically learning feature representations that are most relevant for prediction, potentially leading to more accurate predictions.
