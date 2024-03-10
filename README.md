@@ -97,3 +97,41 @@ Neural networks are powerful models that capture the complexity of nonlinear rel
 
 ### Random Forests
 Random Forest is another model we plan to explore further. It is known for its robustness to overfitting and its ability to handle complex interactions between features. Random forests are particularly suitable for datasets with mixed feature types, as they can efficiently handle numeric and categorical variables. In addition, Random Forest can handle high dimensionality due to the single coding of categorical variables, which makes it an ideal candidate model for our dataset.
+
+
+## Model 2: Random Forest Regression
+
+### Introduction
+In this section, we explore the application of Random Forest Regression as a modeling technique for crop production forecasting. Random forest regression is a powerful ensemble learning method capable of capturing complex relationships in data by combining multiple decision trees.
+
+### Model Training and Evaluation
+We trained the random forest regression model using the first model's processed data and features. The dataset was split into training and test sets to facilitate model evaluation. The model is then fitted to the training data and used to make predictions on the test set.
+
+### Results
+The performance metrics of the model are as follows:
+- Mean squared error Testing (MSE): about 0.7894
+- Mean Squared Error Training (MSE): about 0.7853
+
+This indicates that the test set has a slightly higher error than the training set, suggesting slight overfitting.
+
+### Hyperparameter Tuning
+To optimize the performance of the model, we tuned the hyperparameters with 5-fold cross-validation using GridSearchCV. This involved exploring different combinations of hyperparameters, such as the number of estimators and the maximum depth of the tree, to determine the optimal configuration.
+
+### Results
+- Best Parameters: 'max_depth': 15, 'n_estimators': 200
+- Best Model Mean Squared Error: 0.5588088610648668
+
+<p align="center">
+  <img src="assets/model2_fittingG.png" width="50%" height="50%">
+</p>
+
+<p align="center" style="font-size:85%">
+  Figure 3: the fitting graph of Model 2. Our model after Hyperparameter Tuning has improved performance.
+</p>
+
+### Conclusion.
+The random forest regression model initially exhibited a degree of overfitting, which was reflected in the higher MSE on the test set than on the training set. However, by tuning the hyperparameters, we significantly improved the performance of the model, thereby reducing the MSE on both the training and test sets.
+
+The random forest regression model showed better performance after hyperparameter tuning than the polynomial regression model. Despite encountering runtime issues due to the model's computational complexity, we optimized the model's performance through effective hyperparameter tuning techniques.
+
+To further enhance the random forest regression model, we can explore the dimensionality reduction technique and try to use the ensemble approach to improve the prediction accuracy while solving the runtime limitation problem. In conclusion, the random forest regression model shows better predicting in crop yields. 
