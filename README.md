@@ -254,6 +254,14 @@ Future improvements for enhancing model performance include data augmentation, a
 - **K-fold Cross-Validation**: Ensured model robustness and no overfitting.
 - **MSE Metric**: Test MSE of 0.202 and Train MSE of 0.193.
 
+<p align="center">
+  <img src="assets/image.png" width="50%" height="50%">
+</p>
+
+<p align="center" style="font-size:85%">
+  Figure 5: MSE by Model Type
+</p>
+
 ## Discussion
 
 ## Conclusion
