@@ -18,7 +18,7 @@ The dataset consists of the following columns:
   7. `Production`: Indicates the total production of a crop field in a given season. 
   8. `Yield`: Calculates the yield per unit area for that particular observation.
 
-## 2. Insights
+## 2. Insights & Introduction(加intro/figure的部分)
 
 The dataset comprises 345,336 observations, covering 37 unique states, 707 districts, 55 different types of crops, 24 years, and 6 agricultural seasons.
 
@@ -179,4 +179,83 @@ The model significantly improved the predictive accuracy for crop production com
 
 Future improvements for enhancing model performance include data augmentation, advanced feature engineering, and exploring ensemble methods or more sophisticated neural network architectures. Additionally, integrating external datasets could further improve predictions, making the model an even more powerful tool for agricultural planning and forecasting. These steps will aim to solidify the model's applicability in real-world scenarios, ensuring it can serve as a reliable decision-support tool in agricultural production systems.
 
+## 7. Methods
+### 7.1 Data Exploration
+- **Observation Count (`shape[0]`)**: Identifies the total number of observations in the dataset.
+- **Column Examination (manual categorization)**: Columns classified into categorical and numerical groups.
+- **Missing Data Analysis (`isna().sum()/shape[0]`)**: Detects missing values in the dataset.
+- **Data Distribution (`describe()`)**: Understands the distribution of numerical variables.
+- **Uniqueness Analysis (`nunique()`)**: Checks the number of unique values in each column.
+- **Value Counts for Categorical Data (`value_counts(normalize=True)[:5]`)**: Provides a deeper understanding of categorical variables.
+- **Outlier Identification**: Identifies outliers in each column.
 
+### 7.2 Preprocessing
+- **Addressing Missing Values**: Eliminates rows containing missing values.
+- **Addressing Outliers**: Recognizes the potential influence of outliers, especially in the `Area` and `Production` columns.
+- **Drop Unused Column**: `Yield` column excluded to mitigate multicollinearity risks and enhance interpretability.
+- **Log Transformation**: Addresses skewness in the data, improving predictive model performance.
+- **One-hot Encode**: Helps in better learning from categorical columns.
+- **Aggregation**: Simplifies specific columns to prepare the dataset for deeper analysis.
+
+### 7.3 Model 1 - Polynomial Regression
+- **Polynomial Regression**: Captures complex, nonlinear dynamics in agricultural productions.
+- **Baseline Linear Regression**: Establishes a baseline for comparison with more complex models.
+- **Feature Extension**: Introduces higher-degree combinations of existing variables to reflect the complexity of agricultural production.
+- **MSE Metric**: Facilitates a comprehensive assessment of model accuracy and generalizability.
+- **Comparative Analysis**: Between baseline linear regression and polynomial regression with an interactive term to evaluate polynomial model's efficacy.
+
+### 7.4 Model 2 - Random Forest Regressor
+- **Random Forest Regressor**: Utilizes ensemble learning with multiple decision trees for accurate and robust predictions.
+- **Baseline Model**: Training and testing split to evaluate the predictive capabilities and generalizability of the model.
+- **Hyperparameter Tuner**: Systematic search over a parameter grid to minimize prediction error.
+- **MSE Metric**: Used to capture the predictive accuracy of the model.
+
+### 7.5 Model 3 - Neural Network with Dense Layers
+- **Neural Network**: Models complex patterns using a sophisticated approach for better predictions.
+- **Baseline**: Utilizes three dense layers with sigmoid activation and a final output layer for regression, trained with SGD optimizer.
+- **Hyperparameter Tuner**: Employs Keras Tuner to find the optimal model configuration.
+- **K-fold Cross-Validation**: Evaluates model performance across different dataset segments for a comprehensive view.
+- **MSE Metric**: Aligns with previous models to measure predictive accuracy.
+
+## 8. Results
+### 8.1 Data Exploration
+- **Observation Count (`shape[0]`)**: The dataset comprises 345,336 observations.
+- **Column Examination**: Five categorical columns (`State`, `District`, `Crop`, `Crop_Year`, `Season`) and three numerical columns (`Area`, `Production`, `Yield`).
+- **Missing Data Analysis**: Detected missing values, leading to considerations about retention or removal.
+- **Data Distribution**: Analysis allows identification of variable spread and central tendencies.
+- **Uniqueness Analysis**: Identified 37 unique states, 707 districts, 55 crops, 24 crop years, and 6 seasons.
+- **Value Counts for Categorical Data**: Top five values in each categorical column analyzed, with Uttar Pradesh as the most frequent state, highlighting its agricultural significance.
+- **Outlier Identification**: Outliers in `Area` and `Production` were deemed reasonable within the agricultural context and retained.
+
+### 8.2 Preprocessing
+- **Addressing Missing Values**: Rows with missing values were removed, affecting only 1.4% of the dataset.
+- **Addressing Outliers**: Outliers in `Area` and `Production` columns were retained, considered true representations of agricultural data variability.
+- **Drop Unused Column**: The `Yield` column was dropped, being redundant as its values can be derived from `Area` and `Production`.
+- **Log Transformation**: Applied to normalize distributions and improve predictive model performance.
+- **One-hot Encode**: Converted categorical columns into numerical formats for effective learning.
+- **Aggregation**: Simplified the `District` category by aggregating less represented districts into an `Other` category for each state.
+
+### 8.3 Model 1 - Polynomial Regression
+- **Polynomial Regression**: Captured nonlinear relationships to illuminate factors affecting crop production.
+- **Feature Extension**: Creation of interactive polynomial features, such as `Season`*`Crop` and `Crop_year`*`Season`, enhanced model sophistication.
+- **MSE Metric**: Test MSE of 0.3872 and Train MSE of 0.3852.
+- **Comparative Analysis**: Balanced approach to avoid underfitting or overfitting.
+
+### 8.4 Model 2 - Random Forest Regressor
+- **Random Forest Regressor**: Trained on processed data and features, with the model evaluated on split training and test sets.
+- **Baseline Model**: Achieved Test MSE of 0.7894 and Train MSE of 0.7853.
+- **Hyperparameter Tuner**: Best parameters found were max_depth of 15 and n_estimators of 200.
+- **MSE Metric**: Best model MSE of 0.5588.
+
+### 8.5 Model 3 - Neural Network with Dense Layers
+- **Neural Network**: Prepared dataset and defined architecture with dense layers, activation functions, and optimizers.
+- **Baseline**: Achieved Train MSE of 0.3014 and Test MSE of 0.3146.
+- **Hyperparameter Tuner**: Optimal parameters included a learning rate of 0.001, 32 nodes per layer, ReLU activation function, and Adam optimizer.
+- **K-fold Cross-Validation**: Ensured model robustness and no overfitting.
+- **MSE Metric**: Test MSE of 0.202 and Train MSE of 0.193.
+
+## Discussion
+
+## Conclusion
+
+## Collaboration section
