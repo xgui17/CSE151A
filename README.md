@@ -146,11 +146,9 @@ $$y = \beta_0 + \beta_{crop}X_{crop} + \beta_{season}X_{season} + \beta_{crop\_y
 Based on the results, our third model, Neural Network with Dense Layers, demonstrates the best performance in terms of MSE.
 
 <p align="center">
-  <img src="assets/image.png" width="50%" height="50%">
-</p>
-
-<p align="center" style="font-size:85%">
-  Figure 5: MSE by Model Type
+  <img src="assets/performance_comparison.png" width="70%">
+  <br>
+  <em>Figure 6: Mean Squared Error (MSE) by Model Type. This bar chart compares the training MSE and testing MSE for three different models developed in this project. Neural Network exhibit the lowest MSE for both training and testing.</em>
 </p>
 
 ## 5. Discussion
@@ -177,7 +175,7 @@ In the exploration of predictive modeling for crop production, our first model, 
 
 Recognizing the limitations of linear models in capturing intricate patterns, we extended our feature set through polynomial expansion, introducing higher-degree combinations of existing variables to better mirror the multifaceted nature of agricultural production. Specifically, the creation of interactive polynomial features, such as the product of "Season" and "Crop" as well as "Crop_year" and "Season", was instrumental in enhancing model sophistication. This approach allowed for a nuanced representation of the interplay between temporal and categorical variables directly impacting crop output.
 
-Following the incorporation of these polynomial features, the model underwent rigorous training and validation processes. Performance was evaluated by the Mean Squared Error (MSE) metric to facilitate a comprehensive assessment of the model's accuracy and its ability to generalize across unseen data. Achieving a MSE of approximately 0.3872 on the test set and 0.3852 on the training set, this model demonstrated a commendable balance in its predictive capability. Such consistency across both datasets suggested that our model adeptly avoided overfitting or underfitting—common pitfalls in machine learning.
+Following the incorporation of these polynomial features, the model underwent rigorous training and validation processes. Achieving a Mean Squared Error (MSE) of approximately 0.3872 on the test set and 0.3852 on the training set, this model demonstrated a commendable balance in its predictive capability. Such consistency across both datasets suggested that our model adeptly avoided overfitting or underfitting—common pitfalls in machine learning.
 
 Comparative analysis with baseline linear regression model and polynomial regression model with only one interactive term served to contextualize the polynomial model's efficacy, ensuring a balanced approach that mitigates risks of underfitting or overfitting by adding too few or too many interactive terms. 
 
