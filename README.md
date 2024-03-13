@@ -10,6 +10,13 @@ The dataset stands out for its completeness. This characteristic is vital as it 
 
 
 ## 2. Figures
+<p align="center">
+  <img src="assets/file1.png" width="50%" height="50%">
+</p>
+
+<p align="center">
+  <img src="assets/file2.png" width="50%" height="50%">
+</p>
 
 ## 3. Methods
 
