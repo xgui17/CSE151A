@@ -125,7 +125,7 @@ To optimize the performance of the model, we tuned the hyperparameters with 5-fo
 - Best Model Mean Squared Error: 0.5588088610648668
 
 <p align="center">
-  <img src="assets/model2_fittingG.png" width="50%" height="50%">
+  <img src="assets/model2_fitting_graph.png" width="50%" height="50%">
 </p>
 
 <p align="center" style="font-size:85%">

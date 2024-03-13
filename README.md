@@ -4,9 +4,11 @@ This is the project repository for CSE151A at UCSD in WI24. It encompasses a com
 Below is the writeup for this project. Here is the link to our <a href="https://github.com/xgui17/CSE151A/blob/main/Model%203%20and%20Final%20Submission.ipynb">jupyter notebook</a>, feel free to check it out!
 
 ## 1. Introduction
-India stands as the world's largest country by population and seventh largest country by area, a factor that inherently underscores the critical need for sustainable agricultural practices to ensure food security for its billions of inhabitants. The sustainability of people’s daily food source is not just a matter of national concern but has global implications, considering India's significant role in the global food market. As a major producer of various staple crops, including rice, wheat, pulses, any fluctuation in India's agricultural output can have far-reaching effects on global food prices and availability. This project is aimed at predicting crop production in India, hoping to leverage machine learning techniques to tackle the challenge of optimizing agricultural output. By analyzing various features such as season, geographical data, and crop variety, the project seeks to explore and forecast crop production. This predictive goal offers the potential to improve how agricultural policy is formulated and how resources are allocated. This project is interesting due to its unique and interdisciplinary structure, which merges the realms of agriculture, environmental science, and technology. It embodies the essence of innovation, applying the latest advancements in data analytics and machine learning to solve real-world problems that could potentially affect millions of lives. Moreover, by predicting crop production, the project provides insights that can help in mitigating the effects of potential food shortages, reducing waste, and enhancing food distribution strategies.By understanding the variables that impact crop production, the project can guide farmers towards more sustainable agricultural practices, reducing the environmental footprint of farming and ensuring the long-term viability of India's agricultural sector.
+India stands as the world's largest country by population and seventh largest country by area, a factor that inherently underscores the critical need for sustainable agricultural practices to ensure food security for its billions of inhabitants. The sustainability of people’s daily food source is not just a matter of national concern but has global implications, considering India's significant role in the global food market. As a major producer of various staple crops, including rice, wheat, pulses, any fluctuation in India's agricultural output can have far-reaching effects on global food prices and availability. 
 
-The dataset stands out for its completeness. This characteristic is vital as it ensures that the dataset provides a comprehensive overview of the variables influencing crop production in India. A well-constructed description accompanying the dataset offers clear insights into what the data represents. Credibility is another cornerstone of the dataset's selection. The source of the original data is transparently indicated, assuring of its authenticity and reliability. By relying on a dataset whose origins are clear and verifiable, the project establishes a solid foundation that readers can trust. Compatibility is equally critical. The dataset is structured in such a way that there are no ambiguous columns or undefined values, such that each piece of data can be accurately interpreted and utilized in predictive models. The cleanliness and usability of the dataset is also another key component. With minimal null values and a well-maintained structure, the dataset is primed for analysis without the need for extensive cleaning or preprocessing. In summary, the dataset for predicting crop production in India was chosen due to its completeness, credibility, compatibility, and cleanliness. These attributes ensure that the dataset is not only easy to work with but also robust and reliable, providing a strong foundation for generating accurate and meaningful predictions. 
+This project is aimed at predicting crop production in India, hoping to leverage machine learning techniques to tackle the challenge of optimizing agricultural output. By analyzing various features such as season, geographical data, and crop variety, the project seeks to explore and forecast crop production. This predictive goal offers the potential to improve how agricultural policy is formulated and how resources are allocated. This project is interesting due to its unique and interdisciplinary structure, which merges the realms of agriculture, environmental science, and technology. It embodies the essence of innovation, applying the latest advancements in data analytics and machine learning to solve real-world problems that could potentially affect millions of lives. Moreover, by predicting crop production, the project provides insights that can help in mitigating the effects of potential food shortages, reducing waste, and enhancing food distribution strategies. By understanding the variables that impact crop production, the project can guide farmers towards more sustainable agricultural practices, reducing the environmental footprint of farming and ensuring the long-term viability of India's agricultural sector.
+
+The dataset used in this project stands out for its completeness, a vital characteristic that ensures a comprehensive overview of the variables influencing crop production in India. A well-constructed description accompanying the dataset offers clear insights into what the data represents. Credibility is another cornerstone of the dataset's selection. The source of the original data is transparently indicated, assuring of its authenticity and reliability. By relying on a dataset whose origins are clear and verifiable, the project establishes a solid foundation that readers can trust. Compatibility is equally critical. The dataset is structured in such a way that there are no ambiguous columns or undefined values, such that each piece of data can be accurately interpreted and utilized in predictive models. The cleanliness and usability of the dataset is also another key component. With minimal null values and a well-maintained structure, the dataset is primed for analysis without the need for extensive cleaning or preprocessing. In summary, the dataset for predicting crop production in India was chosen due to its completeness, credibility, compatibility, and cleanliness. These attributes ensure that the dataset is not only easy to work with but also robust and reliable, providing a strong foundation for generating accurate and meaningful predictions. 
 
 
 ## 2. Figures
@@ -22,9 +24,6 @@ The dataset stands out for its completeness. This characteristic is vital as it 
   <img src="assets/File3.png" width="50%" height="50%">
 </p>
 
-<p align="center">
-  <img src="assets/File4.png" width="50%" height="50%">
-</p>
 
 <p align="center">
   <img src="assets/File5.png" width="50%" height="50%">
@@ -71,7 +70,10 @@ The data exploration consists of several parts:
 
 
 ### 3.3 Model 1 - Polynomial Regression
-**Polynomial Regression**: Captures complex, nonlinear dynamics in agricultural productions.
+**Polynomial Regression**: Captures complex, nonlinear dynamics in agricultural productions. The model equation is as follows:
+
+$$y = \beta_0 + \beta_{crop}X_{crop} + \beta_{season}X_{season} + \beta_{crop\_year}X_{crop\_year} + \beta_{state}X_{state} + \beta_{season\_crop}X_{season\_crop} + \beta_{cropYear\_season}X_{cropYear\_season} + \varepsilon$$
+
 
 - **Train Test Split**: Split the dataset into training and testing sets to evaluate the predictive capabilities and ensure generalizability.
 - **Baseline Model**: Uses a baseline linear regression to establish a baseline for comparison with more complex models.
@@ -135,8 +137,9 @@ The data exploration consists of several parts:
 
 - **Baseline**: Achieved Train MSE of 0.3014 and Test MSE of 0.3146.
 - **Hyperparameter Tuner**: Optimal parameters included a learning rate of 0.001, 32 nodes per layer, ReLU activation function, and Adam optimizer.
-- **K-fold Cross-Validation**: Ensured model robustness and no overfitting.
 - **MSE Metric**: Train MSE of 0.193 and Test MSE of 0.202.
+- **K-fold Cross-Validation**: Ensured model robustness and no overfitting. Train MSE of 0.2054 and Test MSE of 0.2124.
+
 
 ### 4.6 Compare Model Performances
 
@@ -151,7 +154,7 @@ Based on the results, our third model, Neural Network with Dense Layers, demonst
 </p>
 
 ## 5. Discussion
-### Exploratory Data Analysis
+### Data Exploration: Exploratory Data Analysis (EDA)
 In the Exploratory Data Analysis (EDA), we first examined the number of observations totaling 345,336 observations, providing a large dataset for our analysis. This large sample size enhances the robustness of our modeling efforts and increases our confidence in the generalizability of our findings. In the data preprocessing phase of our study, we took several steps to refine the dataset for subsequent modeling. Initially, we addressed missing values by eliminating rows that contained them, which constituted a mere 1.4% of our dataset, thereby preserving the integrity of our data without significant loss. Recognizing the potential influence of outliers, especially in the "Area" and "Production" columns, we opted to retain these values, considering them as true representations of the variability inherent in agricultural data. To mitigate the risks of multicollinearity and enhance data interpretability, the "Yield" column was excluded from the analysis; we consider its information to be redundant since it could be calculated from the "Area" and "Production" values. Further, we applied log transformation to both the "Production" and "Area" columns to address the skewness of the data, aiming to normalize the distribution and improve the performance of the predictive models. Categorical features, such as "Crop", "Season", "State", and "District," were transformed into numerical values using one-hot encoding, a critical step for enabling machine learning algorithms to process and learn from these variables effectively. 
 
 ### Preprocessing:
@@ -171,21 +174,52 @@ These preprocessing steps were fundamental in ensuring the dataset was optimally
 
 ### Model 1: Polynomial Regression
 In the exploration of predictive modeling for crop production, our first model, Polynomial Regression, aimed to encapsulate the complex, nonlinear dynamics influencing agricultural productions. 
-Recognizing the limitations of linear models in capturing intricate patterns, we extended our feature set through polynomial expansion, introducing higher-degree combinations of existing variables to better mirror the multifaceted nature of agricultural production. Specifically, the creation of interactive polynomial features, such as the product of "Season" and "Crop" as well as "Crop_year" and "Season", was instrumental in enhancing model sophistication. This approach allowed for a nuanced representation of the interplay between temporal and categorical variables directly impacting crop output. 
-Following the incorporation of these polynomial features, the model underwent rigorous training and validation processes. Performance was evaluated by the Mean Squared Error (MSE) metric to facilitate a comprehensive assessment of the model's accuracy and its ability to generalize across unseen data. Comparative analysis with baseline linear regression model and polynomial regression model with only one interactive term served to contextualize the polynomial model's efficacy, ensuring a balanced approach that mitigates risks of underfitting or overfitting. 
-The result of this model shows consistency across training and testing data and with a reasonable MSE as a starting point for our models. However, the decision to exclude the "region" column from this model may have overlooked potentially valuable geographic insights that could affect the prediction. Therefore our plan for the future model was to use a more robust prediction model that could give us a better prediction. 
+
+Recognizing the limitations of linear models in capturing intricate patterns, we extended our feature set through polynomial expansion, introducing higher-degree combinations of existing variables to better mirror the multifaceted nature of agricultural production. Specifically, the creation of interactive polynomial features, such as the product of "Season" and "Crop" as well as "Crop_year" and "Season", was instrumental in enhancing model sophistication. This approach allowed for a nuanced representation of the interplay between temporal and categorical variables directly impacting crop output.
+
+Following the incorporation of these polynomial features, the model underwent rigorous training and validation processes. Performance was evaluated by the Mean Squared Error (MSE) metric to facilitate a comprehensive assessment of the model's accuracy and its ability to generalize across unseen data. Achieving a MSE of approximately 0.3872 on the test set and 0.3852 on the training set, this model demonstrated a commendable balance in its predictive capability. Such consistency across both datasets suggested that our model adeptly avoided overfitting or underfitting—common pitfalls in machine learning.
+
+Comparative analysis with baseline linear regression model and polynomial regression model with only one interactive term served to contextualize the polynomial model's efficacy, ensuring a balanced approach that mitigates risks of underfitting or overfitting by adding too few or too many interactive terms. 
+
+<p align="center">
+  <img src="assets/model1_fitting_graph.png" width="70%">
+  <br>
+  <em>Figure 7: Comparison of training and testing MSE across models with different numbers of unteraction terms. This figure illustrates how the inclusion of varying numbers of interaction terms affects model performance, focusing on Simple Linear Regression, Polynomial Regression with 1 interactive term, and our first model -- Polynomial Regression with 2 interactive terms.</em>
+</p>
+
+The result of this model shows consistency across training and testing data and with a reasonable MSE as a starting point for our analysis. This achievement is noteworthy, considering the model's simplicity relative to more complex machine learning algorithms. The solid foundation laid by Polynomial Regression, however, also brought to light its inherent limitations. Despite its success in capturing a broad outline of the relationships within our data, the model's linear nature meant that it could only approximate the complex, multi-dimensional dynamics of agricultural productivity to a certain extent. This realization underscored the necessity for developing more sophisticated models capable of delving deeper into the nuanced interactions that influence crop production in future steps.
 
 ### Model 2: Random Forest Regressor
 Our second model was Random Forest Regression. This model leverages the ensemble learning technique, which utilizes multiple decision trees to form a more accurate and robust prediction model. The strength of Random Forest lies in its capacity to handle complex, nonlinear data relationships through the aggregation of decisions from numerous trees, thereby reducing the risk of overfitting associated with individual decision trees.
-Utilizing the dataset and features processed from the initial model, we divided the data into training and test subsets to facilitate a structured evaluation of the model's predictive capabilities. The Random Forest model was then trained on the training set, ensuring it learns the intricacies and patterns essential for accurate crop production predictions. Following training, the model's performance was assessed on the test set to gauge its predictive accuracy and generalizability.
-To further refine the model and enhance its prediction accuracy, hyperparameter tuning was conducted using a 5-fold cross-validation approach within the GridSearchCV framework. This step involved a systematic search over a specified parameter grid for the number of estimators and the maximum depth of each tree, among other parameters, to identify the most effective combination that minimizes prediction error. This process of hyperparameter tuning is crucial in tailoring the Random Forest model to our specific dataset and predictive goals, aiming to achieve the lowest possible Mean Squared Error (MSE) and thus, the highest predictive accuracy in forecasting crop production. 
-The result of this model was not as good as the previous model but it also showed consistency between training and test data. To improve this model, we will add more parameters to our hyperparameter tunning processes and give a wider range of selection. 
+
+Utilizing the dataset and features processed from the initial model, we divided the data into training and test subsets to facilitate a structured evaluation of the model's predictive capabilities. A baseline random forest model was initially constructed using randomly selected parameters, serving as a foundational reference. This model recorded a training Mean Squared Error (MSE) of 0.7853 and a testing MSE of 0.7894. The close values between training and testing errors indicate a consistent model but highlighted the potential for improvement.
+
+In pursuit of enhanced prediction accuracy, we undertook hyperparameter tuning. This process involved a 5-fold cross-validation method, executed within the GridSearchCV framework, aiming to meticulously fine-tune the model's parameters. This step involved a systematic search over a specified parameter grid for the number of estimators and the maximum depth of each tree, among other parameters, to identify the most effective combination that minimizes prediction error. After searching among 9 possible parameter combinations, the optimal parameters chosen by the searcher were a maximum depth of 15 and a number of estimators of 200, which achieved a test MSE of 0.5588.
+
+<p align="center">
+  <img src="assets/model2_fitting_graph.png" width="70%">
+  <br>
+  <em>Figure 8: Comparison of Training and Testing MSE of the Baseline Random Forest Regressor and Model 2 after Hyperparameter-Tuning. This figure demonstrates the importance of tuning hyperparameters in tailoring the model to our specific dataset and predictive goals.</em>
+</p>
+
+Despite the model having a higher MSE compared to our first model, it still demonstrates a capacity to capture the intricate nature of the data, suggesting its potential with further refinement. However, the initial decision to exclude the "District" column may have limited our ability to fully leverage geographic insights integral to enhancing the model's predictive accuracy. In our next iteration, we plan to incorporate the "District" variable, anticipating that this adjustment will enable a more nuanced understanding of the data's spatial dynamics and contribute to significant performance improvements.
 
 ### Model 3: Neural Network with Dense Layers
-In our third model, we delve into the capabilities of neural networks, specifically focusing on a dense layer architecture to predict crop production. Neural networks offer a sophisticated approach to modeling complex patterns and relationships in data, making them an ideal candidate for advancing beyond the limitations of our initial models. This section outlines our journey from constructing a baseline neural network to employing advanced techniques for hyperparameter tuning and validation to enhance prediction accuracy.
-The process began with the preparation of the dataset, followed by the careful design of the neural network architecture. This architecture comprised multiple dense layers, known for their efficacy in capturing nonlinear relationships within the data. The selection of activation functions and optimizers was critical to the model's ability to learn effectively from the training data. To navigate the vast parameter space and identify the optimal configuration, we utilized Keras Tuner, a powerful tool for automated hyperparameter optimization. This allowed us to systematically explore various combinations of hyperparameters, significantly improving model performance.
-Ensuring the model's robustness and generalizability was important. To this end, we employed k-fold cross-validation, a technique that evaluates the model's performance across different segments of the dataset, providing a comprehensive view of its predictive capabilities. Initially, we established a baseline neural network model to set a performance benchmark. Subsequent iterations focused on refining the model through hyperparameter tuning, guided by Keras Tuner and incorporating an early stopping mechanism to prevent overfitting. These steps helped with the validation of the model's generalizability through k-fold cross-validation, confirming its ability to reliably predict crop production across diverse data subsets. 
-The result of this model by far gives us the best result as we have a lower MSE. This model gives us a more robust and accurate prediction and we could change the number of nodes in each layer to be different to see if it would help further improve our model.
+In our third model, we explored the capabilities of neural networks, specifically focusing on a dense layer architecture to predict crop production. Neural networks offer a sophisticated approach to modeling complex patterns and relationships in data, making them an ideal candidate for advancing beyond the limitations of our initial models. This section outlines our journey from constructing a baseline neural network to employing advanced techniques for hyperparameter tuning and validation to enhance prediction accuracy.
+
+The process began with the preparation of the dataset, followed by the careful design of the neural network architecture. This architecture comprised multiple dense layers, known for their efficacy in capturing nonlinear relationships within the data. Similar to previous models, we established a baseline performance of training MSE of 0.3014 and testing MSE of 0.3146 with randomly selected parameters.
+
+To further improve the neural network's predictive power, we utilized Keras Tuner, a powerful tool to navigate parameter space for automated hyperparameter optimization, to identify the optimal configuration of activation function, number of nodes in each layer, optimizer type, and learning rate. To reduce computational burden and prevent overfitting, we incorporated an early stopping mechanism to the tuner, which stops the search process once the model performance ceases to improve significantly over a specified number of iterations. After exploring 36 combinations of hyperparameters, the best combination identified by the search was the use of the ReLU activation function in 32 nodes in each internal layer, along with an Adam optimizer with a learning rate of 0.001. This configuration significantly improved model performance, achieving a training MSE of 0.193 and a testing MSE of 0.202.
+
+Finally, we employed k-fold cross-validation to ensure the model's robustness and generalizability. Our model achieved a mean validation MSE of 0.2124 after 5 iterations. This approach not only provided a more reliable estimate of the model's performance on unseen data but also helped to mitigate the risk of overfitting by validating the model's effectiveness across multiple subsets of the data. The consistent performance across all folds underscored the model's ability to generalize well to new data, reinforcing our confidence in its predictive power.
+
+<p align="center">
+  <img src="assets/model3_fitting_graph.png" width="70%">
+  <br>
+  <em>Figure 9: Training and Validation Loss Over Epochs of Model 3. This graph depicts the loss on the training set (blue line with stars) and the validation set (orange line with crosses) over ten epochs. Initially, the training loss is much higher than the validation loss, but it quickly decreases and both converge to a similar value by the tenth epoch, indicating a good fit without overfitting.</em>
+</p>
+
+The performance of this model surpasses that of all others we have tested, delivering the most robust and accurate predictions to date. To potentially enhance its efficacy even further, we could experiment with varying the number of nodes in each layer. This adjustment might unlock additional improvements in the model's predictive capabilities.
 
 
 ### General Discussion
@@ -206,7 +240,7 @@ Lastly, the project's focus on data available from Kaggle may limit the generali
 
 
 ## 6. Conclusion
-Our project embarked on a detailed exploration to predict crop production in India through meticulous data preprocessing and the application of three distinct machine learning models.
+Our project embarked on a detailed exploration to predict crop production in India through meticulous data preprocessing and the application of three distinct machine learning models. 
 
 Through EDA, data preprocessing, and model development, we gained valuable insights into the relationship between production and other factors in agriculture. As we concluded this phase of the project, a number of potential avenues for reflection and future exploration emerged.
 
@@ -214,15 +248,13 @@ One important aspect we recognized was the importance of feature selection and e
 
 In addition, our exploratory data analysis reveals variability in agricultural production practices across regions and seasons. While we provide localized and temporal analyses, in-depth studies of region-specific factors and seasonal variations can provide richer insights into crop production dynamics. This may require subgroup analyses.
 
-While we have utilized polynomial regression, random forest regression, and neural networks with dense layers, there are a number of possible directions for model improvement in the future.
+While we have utilized polynomial regression, random forest regression, and neural networks with dense layers, there are a number of possible directions for model improvement in the future. Decision trees are a potential alternative to our current model, which can effectively capture nonlinearities and interactions between variables by recursively partitioning the feature space according to specific criteria. 
 
-Decision trees are a potential alternative to our current model. Decision trees provide a transparent, interpretable method for modeling complex relationships in data. Decision trees can effectively capture nonlinearities and interactions between variables by recursively partitioning the feature space according to specific criteria. In addition, ensemble methods such as Gradient Boosting Machine (GBM) or Extreme Gradient Boosting (XGBoost) can further enhance the predictive power of decision trees by combining multiple weak learners into one strong predictor.
-
-In addition, ensemble methods like Stacking can utilize the diversity of multiple base learners to complement our existing models. Stacking methods use meta-learners to combine predictions from multiple models to generate final predictions, thus potentially improving prediction accuracy and generalization performance.
+In addition, ensemble methods such as Gradient Boosting Machine (GBM), Extreme Gradient Boosting (XGBoost), and Stacking offer promising pathways to augment the predictive strength of our models. Both GBM and XGBoost enhance decision trees by amalgamating numerous weak learners to form a more accurate and robust predictor. Similarly, Stacking harnesses the variety of multiple base learners, applying meta-learners to synthesize their predictions into a singular, more precise forecast, which could improve both prediction accuracy and the model’s ability to generalize.
 
 Furthermore, models can be refined through more advanced hyperparameter tuning techniques. While we have utilized methods such as GridSearchCV and Keras Tuner to optimize model parameters, more sophisticated methods, such as Bayesian optimization, may lead to further improvements.
 
-In conclusion, while our current model has achieved reasonably good accuracy, many ways exist to explore and improve it further. Considering alternative models and exploring other advanced hyperparameter tuning techniques may allow us to refine our prediction models and provide new insights into crop production prediction.
+In a nutshell, while our current model has achieved reasonably good accuracy, many ways exist to explore and improve it further. Considering alternative models and exploring other advanced hyperparameter tuning techniques may allow us to refine our prediction models and provide new insights into crop production prediction.
 
 
 
