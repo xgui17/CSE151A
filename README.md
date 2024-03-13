@@ -18,6 +18,22 @@ The dataset stands out for its completeness. This characteristic is vital as it 
   <img src="assets/File2.png" width="50%" height="50%">
 </p>
 
+<p align="center">
+  <img src="assets/File3.png" width="50%" height="50%">
+</p>
+
+<p align="center">
+  <img src="assets/File4.png" width="50%" height="50%">
+</p>
+
+<p align="center">
+  <img src="assets/File5.png" width="50%" height="50%">
+</p>
+
+<p align="center">
+  <img src="assets/File6.png" width="50%" height="50%">
+</p>
+
 ## 3. Methods
 
 ### 3.1 Data Exploration
