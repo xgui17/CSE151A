@@ -151,16 +151,22 @@ Based on the results, our third model, Neural Network with Dense Layers, demonst
 </p>
 
 ## 5. Discussion
-### Exploratory Data Analysis:
+### Exploratory Data Analysis
 In the Exploratory Data Analysis (EDA), we first examined the number of observations totaling 345,336 observations, providing a large dataset for our analysis. This large sample size enhances the robustness of our modeling efforts and increases our confidence in the generalizability of our findings. In the data preprocessing phase of our study, we took several steps to refine the dataset for subsequent modeling. Initially, we addressed missing values by eliminating rows that contained them, which constituted a mere 1.4% of our dataset, thereby preserving the integrity of our data without significant loss. Recognizing the potential influence of outliers, especially in the "Area" and "Production" columns, we opted to retain these values, considering them as true representations of the variability inherent in agricultural data. To mitigate the risks of multicollinearity and enhance data interpretability, the "Yield" column was excluded from the analysis; we consider its information to be redundant since it could be calculated from the "Area" and "Production" values. Further, we applied log transformation to both the "Production" and "Area" columns to address the skewness of the data, aiming to normalize the distribution and improve the performance of the predictive models. Categorical features, such as "Crop", "Season", "State", and "District," were transformed into numerical values using one-hot encoding, a critical step for enabling machine learning algorithms to process and learn from these variables effectively. 
 
 ### Preprocessing:
-In the data preprocessing phase of our study, meticulous steps were taken to refine the dataset for subsequent modeling. Initially, we addressed missing values by eliminating rows that contained them, which constituted a mere 1.4% of our dataset, thereby preserving the integrity of our data without significant loss. 
+In the data preprocessing phase of our study, meticulous steps were taken to refine the dataset for subsequent modeling. 
+
+Initially, we addressed missing values by eliminating rows that contained them, which constituted a mere 1.4% of our dataset, thereby preserving the integrity of our data without significant loss. 
+
 Recognizing the potential influence of outliers, especially in the "Area" and "Production" columns, we opted to retain these values, considering them as true representations of the variability inherent in agricultural data. 
+
 To mitigate the risks of multicollinearity and enhance data interpretability, the "Yield" column was excluded from analysis. Its information was deemed redundant since it could be calculated from the "Area" and "Production" values.
- Further, we applied log transformation to both the "Production" and "Area" columns to address the skewness of the data, aiming to normalize the distribution and improve the performance of the predictive models. 
-Categorical features, such as "Crop", "Season", "State", and "District," were transformed into numerical values using one-hot encoding, a critical step for enabling machine learning algorithms to process and learn from these variables effectively. 
-Specifically, the "District" category was simplified by aggregating less represented districts into a generalized "Other" category for each state, significantly reducing the feature space from 707 unique districts to a more manageable 80. This aggregation, alongside the expansive transformation of categorical variables, resulted in a comprehensive feature set, ready for detailed analysis and modeling. 
+
+Further, we applied log transformation to both the "Production" and "Area" columns to address the skewness of the data, aiming to normalize the distribution and improve the performance of the predictive models. 
+
+Categorical features, such as "Crop", "Season", "State", and "District," were transformed into numerical values using one-hot encoding, a critical step for enabling machine learning algorithms to process and learn from these variables effectively. Specifically, the "District" category was simplified by aggregating less represented districts into a generalized "Other" category for each state, significantly reducing the feature space from 707 unique districts to a more manageable 80. This aggregation, alongside the expansive transformation of categorical variables, resulted in a comprehensive feature set, ready for detailed analysis and modeling. 
+
 These preprocessing steps were fundamental in ensuring the dataset was optimally prepared for the application of machine learning techniques, setting a solid foundation for the predictive model building phases that followed.
 
 ### Model 1: Polynomial Regression
@@ -182,7 +188,26 @@ Ensuring the model's robustness and generalizability was important. To this end,
 The result of this model by far gives us the best result as we have a lower MSE. This model gives us a more robust and accurate prediction and we could change the number of nodes in each layer to be different to see if it would help further improve our model.
 
 
+### General Discussion
+Our project on predicting crop production in India using machine learning models has yielded insightful findings and underscored the potential of data-driven approaches in agriculture. This discussion outlines the successes achieved, the limitations encountered, and our future plans for extending this work.
+
+#### Success
+The project's primary success lies in its comprehensive approach to understanding and predicting crop yields through machine learning. By leveraging a dataset that spans various crops, states, districts, and years, we've managed to apply and compare different modeling techniques, each offering unique insights into the factors influencing agricultural production. The successful implementation of data preprocessing techniques, such as log transformation and categorical feature encoding, significantly enhanced the quality of our dataset, making it more amenable to machine learning algorithms.
+
+Furthermore, the use of models ranging from polynomial regression to neural networks allowed us to explore the data's complexity at different levels. The neural network model, in particular, demonstrated exceptional performance, achieving an MSE of 0.202 on the test set and 0.193 on the training set, highlighting the advanced capabilities of deep learning in capturing the nuanced patterns of crop production data.
+
+#### Limitation
+
+Despite these successes, our project faced several limitations. Firstly, the scope of the dataset, while extensive, did not include certain potentially influential factors such as soil type, weatherconditions, and irrigation practices, which could significantly affect crop yields. The exclusion of these variables might limit the models' ability to capture the full breadth of factors impacting agricultural production.
+
+Secondly, the computational resources required for model training, especially for the Random Forest Regressor and Neural Network models, posed challenges. These complexities led to limitations in our ability to extensively tune hyperparameters or explore more sophisticated neural network architectures within the project's timeframe.
+
+Lastly, the project's focus on data available from Kaggle may limit the generalizability of the findings to broader contexts. Agricultural practices and crop yields can vary significantly across different geographical regions and time periods, which might not be fully represented in the dataset used.
+
+
 ## 6. Conclusion
+Our project embarked on a detailed exploration to predict crop production in India through meticulous data preprocessing and the application of three distinct machine learning models.
+
 Through EDA, data preprocessing, and model development, we gained valuable insights into the relationship between production and other factors in agriculture. As we concluded this phase of the project, a number of potential avenues for reflection and future exploration emerged.
 
 One important aspect we recognized was the importance of feature selection and engineering design. While our model effectively utilized existing variables, there may be untapped potential for exploring additional features or deriving new features to improve prediction accuracy. For example, integrating external datasets such as weather patterns, soil types, and economic indicators could provide valuable background information and improve model robustness.
@@ -202,11 +227,17 @@ In conclusion, while our current model has achieved reasonably good accuracy, ma
 
 
 ## 7. Collaboration
-Nan Huang, Yi Zhang, and Luran Zhang worked as a team, collaborated and mainly contributed to the code and ReadME part of the Preprocessing, Model 2 - Random Forest Regressor, Discussion, and Conclusion part of the project. We all gave feedback during each step.
-Jason helped to search dataset to use, made visualizations on `Area` and `Production`, participated in making the linear regression model with interaction terms, and also searched graphs to help narrate the story in this project. Andrew helped create visualizations for numerical data, participated in developing the linear regression model with interaction terms, and wrote the introduction and assisted with creating figures. 
-Shentong Li took on the dual role of a coder and writer for our third model (neural network). Additionally, Shentong also wrote the documentation and explanation for Model 3.
-Xiaoyu Gui also served as a coder and writer for Model 3, working alongside Shentong to develop the neural network. Xiaoyu was also responsible for writing the documentation and explanation for Model3.
-Yuhe Tian served as a coder and writer who focused on the coding and descriptions in the Exploratory Data Analysis (EDA) part, and the methods and the results sections of our final write-up.
+**Nan Huang**, **Yi Zhang**, and **Luran Zhang** worked as a team, collaborated and mainly contributed to the code and ReadME part of the Preprocessing, Model 2 - Random Forest Regressor, Discussion, and Conclusion part of the project. We all gave feedback during each step.
+
+**Jason Dai** helped to search dataset to use, made visualizations on `Area` and `Production`, participated in making the linear regression model with interaction terms, and also searched graphs to help narrate the story in this project.
+
+**Andrew Zhao** helped create visualizations for numerical data, participated in developing the linear regression model with interaction terms, and wrote the introduction and assisted with creating figures. 
+
+**Shentong Li** took on the dual role of a coder and writer for our third model (neural network). Additionally, Shentong also wrote the documentation and explanation for Model 3.
+
+**Xiaoyu Gui** was also a coder and writer for Model 3, working alongside Shentong to develop the neural network. Xiaoyu was also responsible for refining the final writeup and adding writeup to each step.
+
+**Yuhe Tian** served as a coder and writer who focused on the coding and descriptions in the Exploratory Data Analysis (EDA) part, and the methods and the results sections of our final write-up.
 
 
 
