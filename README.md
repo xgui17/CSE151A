@@ -61,7 +61,7 @@ The data exploration consists of several parts:
 - **Addressing Missing Values**: Eliminates rows containing missing values.
 - **Addressing Outliers**:
 <p align="center">
-  <img src="assets/File3.png" width="50%" height="50%">
+  <img src="assets/Updated_File3.png" width="50%" height="50%">
   <br>
   <em>Figure 3: shows the relationship between `Area` and `Production` with outlier included.</em>
   <br>
