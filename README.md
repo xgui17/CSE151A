@@ -65,6 +65,7 @@ The data exploration consists of several parts:
   <br>
   <em>Figure 3: shows the relationship between `Area` and `Production` with outlier included.</em>
   <br>
+  <br>
   Recognizes the potential influence of outliers, especially in the `Yield` and `Production` columns.
 </p>
 
