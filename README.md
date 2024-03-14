@@ -36,6 +36,8 @@ The dataset used in this project stands out for its completeness, a vital charac
 
 <p align="center">
   <img src="assets/File5.png" width="50%" height="50%">
+  <br>
+  <em>Figure 4: This is the structure of the neural net work model we will use, which the number of nodes in each layer and the number of layers are specified in the figure.</em>
 </p>
 
 <p align="center">
