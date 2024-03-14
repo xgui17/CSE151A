@@ -43,7 +43,7 @@ The dataset used in this project stands out for its completeness, a vital charac
 <p align="center">
   <img src="assets/File6.png" width="50%" height="50%">
   <br>
-  <em>Figure 5: This is the generic representation of a decision tree in our random forest model, which classifies data through asking questions at each node.</em>
+  <em>Figure 5: This is the generic representation of a decision tree in our random forest model, which classifies data through asking questions at each node. The source of the figure is shown in the figure.</em>
 </p>
 
 ## 3. Methods
