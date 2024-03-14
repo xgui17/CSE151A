@@ -29,12 +29,6 @@ The dataset used in this project stands out for its completeness, a vital charac
   <em>Figure 2: compares the agricultural output shares from various sectors in India between two periods: 1980-1984 and 2004-2008, showing a shift in the percentage contribution of grains, horticultural crops, specialty crops, pulses, oilseeds, and livestock to the total agricultural output.</em>
 </p>
 
-<p align="center">
-  <img src="assets/File3.png" width="50%" height="50%">
-  <br>
-  <em>Figure 3: shows the relationship between `Area` and `Production` with outlier included.</em>
-</p>
-
 
 ## 3. Methods
 
@@ -71,7 +65,7 @@ The data exploration consists of several parts:
   <br>
   <em>Figure 3: shows the relationship between `Area` and `Production` with outlier included.</em>
 </p>
-- Recognizes the potential influence of outliers, especially in the `Area` and `Production` columns.
+  Recognizes the potential influence of outliers, especially in the `Area` and `Production` columns.
 
 - **Drop Unused Column**: `Yield` column excluded to mitigate multicollinearity risks and enhance interpretability.
 - **Log Transformation**: Addresses skewness in the data, improving predictive model performance.
