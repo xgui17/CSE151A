@@ -24,7 +24,7 @@ The dataset used in this project stands out for its completeness, a vital charac
 <p align="center">
   <img src="assets/File2.png" width="50%" height="50%">
   <br>
-  Source: [https://ipad.fas.usda.gov/countrysummary/Default.aspx?id=IN](https://www.ers.usda.gov/data-products/chart-gallery/gallery/chart-detail/?chartId=78652)
+  Source: https://www.ers.usda.gov/data-products/chart-gallery/gallery/chart-detail/?chartId=78652
   <br>
   <em>Figure 2: compares the agricultural output shares from various sectors in India between two periods: 1980-1984 and 2004-2008, showing a shift in the percentage contribution of grains, horticultural crops, specialty crops, pulses, oilseeds, and livestock to the total agricultural output.</em>
 </p>
