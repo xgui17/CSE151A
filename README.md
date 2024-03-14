@@ -34,18 +34,6 @@ The dataset used in this project stands out for its completeness, a vital charac
 </p>
 
 
-<p align="center">
-  <img src="assets/File5.png" width="50%" height="50%">
-  <br>
-  <em>Figure 4: This is the structure of the neural net work model we will use, which the number of nodes in each layer and the number of layers are specified in the figure.</em>
-</p>
-
-<p align="center">
-  <img src="assets/File6.png" width="50%" height="50%">
-  <br>
-  <em>Figure 5: This is the generic representation of a decision tree in our random forest model, which classifies data through asking questions at each node. The source of the figure is shown in the figure.</em>
-</p>
-
 ## 3. Methods
 
 ### 3.1 Data Exploration
@@ -102,6 +90,12 @@ $$y = \beta_0 + \beta_{crop}X_{crop} + \beta_{season}X_{season} + \beta_{crop\_y
 - **Hyperparameter Tuner**: Systematic search over a parameter grid to minimize prediction error.
 - **MSE Metric**: Used to capture the predictive accuracy of the model.
 
+<p align="center">
+  <img src="assets/File6.png" width="50%" height="50%">
+  <br>
+  <em>Figure 4: This is the generic representation of a decision tree in our random forest model, which classifies data through asking questions at each node. The source of the figure is shown in the figure.</em>
+</p>
+
 ### 3.5 Model 3 - Neural Network with Dense Layers
 **Neural Network**: Models complex patterns using a sophisticated approach for better predictions.
 
@@ -110,6 +104,12 @@ $$y = \beta_0 + \beta_{crop}X_{crop} + \beta_{season}X_{season} + \beta_{crop\_y
 - **Hyperparameter Tuner**: Employs Keras Tuner to find the optimal model configuration.
 - **K-fold Cross-Validation**: Evaluates model performance across different dataset segments for a comprehensive view.
 - **MSE Metric**: Aligns with previous models to measure predictive accuracy.
+
+<p align="center">
+  <img src="assets/File5.png" width="50%" height="50%">
+  <br>
+  <em>Figure 5: This is the structure of the neural net work model we will use, which the number of nodes in each layer and the number of layers are specified in the figure.</em>
+</p>
 
 ## 4. Results
 
