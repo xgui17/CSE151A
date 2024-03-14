@@ -65,7 +65,8 @@ The data exploration consists of several parts:
   <br>
   <em>Figure 3: shows the relationship between `Area` and `Production` with outlier included.</em>
 </p>
-  Recognizes the potential influence of outliers, especially in the `Area` and `Production` columns.
+<br>
+Recognizes the potential influence of outliers, especially in the `Yield` and `Production` columns.
 
 - **Drop Unused Column**: `Yield` column excluded to mitigate multicollinearity risks and enhance interpretability.
 - **Log Transformation**: Addresses skewness in the data, improving predictive model performance.
