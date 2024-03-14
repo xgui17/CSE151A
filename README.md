@@ -32,7 +32,7 @@ The dataset used in this project stands out for its completeness, a vital charac
 <p align="center">
   <img src="assets/File3.png" width="50%" height="50%">
   <br>
-  <em>Figure 3: shows the relationship between `Area` and `Production`with outlier included.</em>
+  <em>Figure 3: shows the relationship between ```Area``` and ```Production```with outlier included.</em>
 </p>
 
 
