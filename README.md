@@ -16,6 +16,7 @@ The dataset used in this project stands out for its completeness, a vital charac
   <img src="assets/File1.png" width="50%" height="50%">
   <br>
   Source: https://ipad.fas.usda.gov/countrysummary/Default.aspx?id=IN
+  <br>
   <em>Figure 1: visual representation of India's crop calendar, showing the planting, growing, and harvesting seasons for various crops, along with their contribution to total agricultural production.</em>
 </p>
 
