@@ -32,7 +32,7 @@ The dataset used in this project stands out for its completeness, a vital charac
 <p align="center">
   <img src="assets/File3.png" width="50%" height="50%">
   <br>
-  <em>Figure 3: shows the relationship between Area and Production with outlier included.</em>
+  <em>Figure 3: shows the relationship between `Area` and `Production` with outlier included.</em>
 </p>
 
 
@@ -65,7 +65,14 @@ The data exploration consists of several parts:
 
 ### 3.2 Preprocessing
 - **Addressing Missing Values**: Eliminates rows containing missing values.
-- **Addressing Outliers**: Recognizes the potential influence of outliers, especially in the `Area` and `Production` columns.
+- **Addressing Outliers**:
+<p align="center">
+  <img src="assets/File3.png" width="50%" height="50%">
+  <br>
+  <em>Figure 3: shows the relationship between `Area` and `Production` with outlier included.</em>
+</p>
+- Recognizes the potential influence of outliers, especially in the `Area` and `Production` columns.
+
 - **Drop Unused Column**: `Yield` column excluded to mitigate multicollinearity risks and enhance interpretability.
 - **Log Transformation**: Addresses skewness in the data, improving predictive model performance.
 - **One-hot Encoding**: Helps in better learning from categorical columns.
